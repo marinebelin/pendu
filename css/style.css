@@ -46,6 +46,10 @@ section{
 	color: white;
 }
 
+.play:hover{
+	cursor: pointer;
+}
+
 
 /* SCREEN PLAY */
 
@@ -61,10 +65,19 @@ section{
 
 .word{
 	position: absolute;
+	display: flex;
+	justify-content: center;
     top: 385px;
     left: 200px;
     width: 50%;
     height: 50px;
+}
+
+.borderb{
+	width: 10%;
+	height: 100%;
+	margin-left: 10px;
+	border-bottom: white 1px solid;
 }
 
 .cpt{
@@ -92,6 +105,10 @@ section{
   	background: none;
   	border: none;
   	border-bottom: white 1px solid;
+  	   font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
 }
 
 .envoyer{

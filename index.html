@@ -13,7 +13,6 @@
 	<link rel="icon" sizes="32x32" href="images/favicon/favicon-32.png" type="image/png">
 	<link rel="icon" sizes="64x64" href="images/favicon/favicon-64.png" type="image/png">
 	<link rel="icon" sizes="96x96" href="images/favicon/favicon-96.png" type="image/png">
-	<link rel="icon" sizes="196x196" href="images/favicon/favicon-196.png" type="image/png">
 	<link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-touch-icon.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-touch-icon-60x60.png">
 	<link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-touch-icon-76x76.png">
@@ -31,13 +30,24 @@
 
 </head>
 <body>
-	<section class="start cache">
+	<section class="start">
 		<div class="imagestart"><div class="play">Jouer</div></div>
 	</section>
 
 	<section class="screenplay cache">
 		<div class="playsprite">
-			<div class="word"></div>
+			<div class="word">
+				<div class="borderb cache"></div>
+				<div class="borderb cache"></div>
+				<div class="borderb cache"></div>
+				<div class="borderb cache"></div>
+				<div class="borderb cache"></div>
+				<div class="borderb cache"></div>
+				<div class="borderb cache"></div>
+				<div class="borderb cache"></div>
+				<div class="borderb cache"></div>
+				<div class="borderb cache"></div>
+			</div>
 			<input type="text" class="yourletter" maxlength="1">
 			<button type="button" class="envoyer">OK</button>
 			<div class="cpt">Il vous reste <span class="nbr"></span> coups !</div>
@@ -49,10 +59,12 @@
 		<div class="imagewin"><div class="winner">Gagné !</div></div>
 	</section>
 
-	<section class="loose">
+	<section class="loose cache">
 		<div class="imageloose"><div class="looser">Perdu !!</div></div>
 	</section>
 	
-</body>
 
+<script src="js/script.js"></script>
+
+</body>
 </html>
