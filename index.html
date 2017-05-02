@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Jeu du pendu</title>
+	<meta name="Description" content="Jeu du pendu réalisé dans le cadre de la formation webdesigner. Entièrement en HTML, CSS et Javascript.">
+	<meta name="Keywords" content="jeu, pendu, mots, javascript, html, css">
+	<meta name="Geography" content="vesoul">
+
+	<!-- favicon -->
+	<link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="images/favicon/favicon.png" type="image/png">
+	<link rel="icon" sizes="32x32" href="images/favicon/favicon-32.png" type="image/png">
+	<link rel="icon" sizes="64x64" href="images/favicon/favicon-64.png" type="image/png">
+	<link rel="icon" sizes="96x96" href="images/favicon/favicon-96.png" type="image/png">
+	<link rel="icon" sizes="196x196" href="images/favicon/favicon-196.png" type="image/png">
+	<link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-touch-icon-144x144.png">
+	<meta name="msapplication-TileImage" content="favicon-144.png">
+	<meta name="msapplication-TileColor" content="#FFFFFF">
+
+	<!-- Google fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+<body>
+	<section class="start cache">
+		<div class="imagestart"><div class="play">Jouer</div></div>
+	</section>
+
+	<section class="screenplay cache">
+		<div class="playsprite">
+			<div class="word"></div>
+			<input type="text" class="yourletter" maxlength="1">
+			<button type="button" class="envoyer">OK</button>
+			<div class="cpt">Il vous reste <span class="nbr"></span> coups !</div>
+		</div>
+		<div class="letters"></div>
+	</section>
+
+	<section class="win cache">
+		<div class="imagewin"><div class="winner">Gagné !</div></div>
+	</section>
+
+	<section class="loose">
+		<div class="imageloose"><div class="looser">Perdu !!</div></div>
+	</section>
+	
+</body>
+</html>
