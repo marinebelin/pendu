@@ -71,6 +71,11 @@ section{
     left: 200px;
     width: 50%;
     height: 50px;
+	font-family: sans-serif;
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
 }
 
 .borderb{
@@ -105,7 +110,7 @@ section{
   	background: none;
   	border: none;
   	border-bottom: white 1px solid;
-  	   font-size: 20px;
+  	font-size: 20px;
     text-align: center;
     text-transform: uppercase;
     color: white;
