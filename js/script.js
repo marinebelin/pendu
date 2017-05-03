@@ -11,9 +11,10 @@ var screenLoose = document.querySelector('.loose');
 var replayButton = document.querySelectorAll('.replay');
 var afficherLettres = document.querySelector('.letters');
 
-var wordHazard = ["FESTIVAL", "APERO"/*, "binouze", "ami", "alcool", "convivial"*/];
+var wordHazard = ["festival", "apero", "binouze", "amis", "alcool", "convivial"];
 var x = parseInt(Math.random()*(wordHazard.length));
-var motSecret = wordHazard[x];
+var wordSelected = wordHazard[x];
+var motSecret = wordSelected.toUpperCase();
 var tableauReponse = [];
 var cpt = 8;
 var beer = document.querySelector('.playsprite');
@@ -53,15 +54,16 @@ function userLetter(){
 
 	if(cpt>1){
 		var letter = document.querySelector('.yourletter');
+		var majLetter = (letter.value).toUpperCase();
 		var lostLife = 0;
 
 		for(var j=0; j<motSecret.length; j++){
-			if(motSecret[j]===letter.value){
-				tableauReponse[j] = letter.value;
+			if(motSecret[j]===majLetter){
+				tableauReponse[j] = majLetter;
 				wordToFind.innerHTML = tableauReponse.join("");
 			}
 
-			if(motSecret[j] != letter.value){
+			if(motSecret[j] != majLetter){
 				lostLife ++;
 			}
 		}
@@ -70,10 +72,10 @@ function userLetter(){
 			beer.style.backgroundPositionX = parseInt(beer.style.backgroundPositionX)- 771 +"px";
 			cpt --
 			var paragraphe = document.createElement("p");
-			afficherLettres.appendChild(paragraphe).innerHTML = letter.value;
+			afficherLettres.appendChild(paragraphe).innerHTML = majLetter;
 		}
 
-		letter.value = '';
+		majLetter = '';
 		document.querySelector('.nbr').innerHTML = cpt;
 		
 
