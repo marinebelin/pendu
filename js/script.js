@@ -11,7 +11,7 @@ var screenLoose = document.querySelector('.loose');
 var replayButton = document.querySelectorAll('.replay');
 var afficherLettres = document.querySelector('.letters');
 
-var wordHazard = ["festival", "apero", "binouze", "ami", "alcool", "convivial"];
+var wordHazard = ["FESTIVAL", "APERO"/*, "binouze", "ami", "alcool", "convivial"*/];
 var x = parseInt(Math.random()*(wordHazard.length));
 var motSecret = wordHazard[x];
 var tableauReponse = [];
