@@ -133,9 +133,7 @@ section{
 .imagewin{
 	width: 640px;
 	height: 450px;
-	position: absolute;
-	top: 30%;
-	left: 30%;
+	position: relative;
 	background-image: url('../images/gagne.png');
 	background-repeat: no-repeat;
 }
@@ -149,20 +147,43 @@ section{
 }
 
 /* LOOSE */
+.flex{
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
 .imageloose{
 	width: 640px;
 	height: 450px;
-	position: absolute;
-	top: 30%;
-	left: 30%;
+	position: relative;
 	background-image: url('../images/perdu.png');
 	background-repeat: no-repeat;
 }
 
 .looser{
-	position: absolute;
-	top: 340px;
-	left: 230px;
 	font-size: 50px;
 	color: white;
+	position: absolute;
+    top: 340px;
+    left: 240px;
+}
+
+.afficherreponse{
+    top: 730px;
+    left: 600px;
+    font-size: 25px;
+    color: #4c6018;
+}
+
+.replay{
+	display: block;
+	background-color: #bf1e2e;
+	padding: 10px 20px 10px 20px;
+    color: white;
+    margin: 30px;
+
 }
