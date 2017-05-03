@@ -99,8 +99,15 @@ section{
     position: absolute;
     bottom: 50px;
     left: 33%;
+    display: flex;
 }
 
+.letters p {
+	margin: 20px;
+	color: white;
+	font-size: 30px;
+
+}
 .yourletter{
 	position: absolute;
     top: 440px;

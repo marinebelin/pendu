@@ -9,11 +9,11 @@ var okButton = document.querySelector('.envoyer');
 var screenWin = document.querySelector('.win');
 var screenLoose = document.querySelector('.loose');
 var replayButton = document.querySelectorAll('.replay');
+var afficherLettres = document.querySelector('.letters');
 
-var wordHazard = ["coucou", "essai", "test"];
+var wordHazard = ["festival", "apero", "binouze", "ami", "alcool", "convivial"];
 var x = parseInt(Math.random()*(wordHazard.length));
 var motSecret = wordHazard[x];
-var wordLength = [wordHazard[x].length];
 var tableauReponse = [];
 var cpt = 8;
 var beer = document.querySelector('.playsprite');
@@ -41,32 +41,11 @@ function play (){
 	screenPlay.classList.remove('cache');
 	document.querySelector('.nbr').innerHTML = cpt;
 	
-	for(i=0; i<wordLength; i++){
-		tableauReponse[i]= "_ ";
-		wordToFind.innerHTML = tableauReponse.join("");	
-
-	}
-
-}
-
-
-function replay(){
-	screenWin.classList.add('cache');
-	screenLoose.classList.add('cache');
-	screenPlay.classList.remove('cache');
-	x = parseInt(Math.random()*(wordHazard.length));
-	motSecret = wordHazard[x];
-	wordToFind.textContent = '';
-	tableauReponse = [];
-	positionLeft = 0;
-	beer.style.backgroundPositionX = positionLeft +"px";
-	cpt = 8;
-	document.querySelector('.nbr').innerHTML = cpt;
-
-	for(var i=0; i<motSecret.length; i++){
+	for(i=0; i<motSecret.length; i++){
 		tableauReponse[i]= "_ ";
 		wordToFind.innerHTML = tableauReponse.join("");	
 	}
+
 }
 
 
@@ -76,7 +55,7 @@ function userLetter(){
 		var letter = document.querySelector('.yourletter');
 		var lostLife = 0;
 
-		for(var j=0; j<wordLength; j++){
+		for(var j=0; j<motSecret.length; j++){
 			if(motSecret[j]===letter.value){
 				tableauReponse[j] = letter.value;
 				wordToFind.innerHTML = tableauReponse.join("");
@@ -89,6 +68,8 @@ function userLetter(){
 
 		if( lostLife === motSecret.length ){
 			beer.style.backgroundPositionX = parseInt(beer.style.backgroundPositionX)- 771 +"px";
+			var paragraphe = document.createElement("p");
+			afficherLettres.appendChild(paragraphe).innerHTML = letter.value;
 		}
 
 		letter.value = '';
@@ -106,5 +87,29 @@ function userLetter(){
 		screenPlay.classList.add('cache');
 		screenLoose.classList.remove('cache');
 		document.querySelector('.reponseici').innerHTML = motSecret ;
+	}
+}
+
+
+function replay(){
+	screenWin.classList.add('cache');
+	screenLoose.classList.add('cache');
+	screenPlay.classList.remove('cache');
+	x = parseInt(Math.random()*(wordHazard.length));
+	motSecret = wordHazard[x];
+	wordToFind.textContent = '';
+	tableauReponse = [];
+	positionLeft = 0;
+	beer.style.backgroundPositionX = positionLeft +"px";
+	afficherLettres.innerHTML = '';
+	cpt = 8;
+	document.querySelector('.nbr').innerHTML = cpt;
+	lostLife = 0;
+	var letter = document.querySelector('.yourletter');
+	letter.value = '';
+
+	for(var i=0; i<motSecret.length; i++){
+		tableauReponse[i]= "_ ";
+		wordToFind.innerHTML = tableauReponse.join("");	
 	}
 }
