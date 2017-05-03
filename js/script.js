@@ -68,12 +68,12 @@ function userLetter(){
 
 		if( lostLife === motSecret.length ){
 			beer.style.backgroundPositionX = parseInt(beer.style.backgroundPositionX)- 771 +"px";
+			cpt --
 			var paragraphe = document.createElement("p");
 			afficherLettres.appendChild(paragraphe).innerHTML = letter.value;
 		}
 
 		letter.value = '';
-		cpt--;
 		document.querySelector('.nbr').innerHTML = cpt;
 		
 
