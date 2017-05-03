@@ -92,9 +92,7 @@ section{
 .letters{
 	width: 50%;
 	height: 80px;
-    position: absolute;
-    bottom: 50px;
-    left: 33%;
+    margin-top: 150px;
     display: flex;
 }
 
@@ -188,5 +186,52 @@ section{
 	padding: 10px 20px 10px 20px;
     color: white;
     margin: 30px;
+    cursor: pointer;
 
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px){
+	section{
+		background-image: url('../images/background-tab.jpg');
+	}
+}
+
+@media screen and (min-width: 544px) and (max-width: 767px) {
+
+}
+
+@media screen and (min-width: 544px) {
+	.imagestart {
+	    width: 800px;
+	    height: 560px;
+	    position: relative;
+	    background-image: url(../images/start.png);
+	    background-repeat: no-repeat;
+	    background-size: 100%;
+	}
+
+	.play {
+	    top: 400px;
+	    left: 300px;
+	    font-size: 80px;
+	}
+
+	.envoyer{
+		width: 80px;
+		height: 40px;
+	}
+
+	.cpt {
+	    top: 500px;
+	    left: 145px;
+	    font-size: 40px;
+	}
+
+	.afficherreponse {
+		font-size: 40px;
+	}
+
+	.replay{
+		font-size: 40px;
+	}
 }
