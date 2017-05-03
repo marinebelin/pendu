@@ -75,7 +75,7 @@ function userLetter(){
 			afficherLettres.appendChild(paragraphe).innerHTML = majLetter;
 		}
 
-		majLetter = '';
+		letter.value = '';
 		document.querySelector('.nbr').innerHTML = cpt;
 		
 
