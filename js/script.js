@@ -98,7 +98,8 @@ function replay(){
 	screenLoose.classList.add('cache');
 	screenPlay.classList.remove('cache');
 	x = parseInt(Math.random()*(wordHazard.length));
-	motSecret = wordHazard[x];
+	wordSelected = wordHazard[x];
+	motSecret = wordSelected.toUpperCase();
 	wordToFind.textContent = '';
 	tableauReponse = [];
 	positionLeft = 0;
@@ -108,7 +109,8 @@ function replay(){
 	document.querySelector('.nbr').innerHTML = cpt;
 	lostLife = 0;
 	var letter = document.querySelector('.yourletter');
-	letter.value = '';
+	letter.value = "";
+	var majLetter = (letter.value).toUpperCase();
 
 	for(var i=0; i<motSecret.length; i++){
 		tableauReponse[i]= "_ ";

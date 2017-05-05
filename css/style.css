@@ -57,13 +57,14 @@ section{
 	position: relative;
 	background-image: url('../images/play-sprite.png');
 	background-repeat: no-repeat;
+	margin-top: 40px;
 }
 
 .word{
 	position: absolute;
 	display: flex;
 	justify-content: center;
-    top: 385px;
+    top: 370px;
     left: 200px;
     width: 50%;
     height: 50px;
@@ -83,7 +84,7 @@ section{
 
 .cpt{
 	position: absolute;
-    top: 515px;
+    top: 420px;
     left: 275px;
     font-size: 25px;
     color: #4c6018;
@@ -92,8 +93,9 @@ section{
 .letters{
 	width: 50%;
 	height: 80px;
-    margin-top: 150px;
+    margin-top: 10px;
     display: flex;
+    justify-content: center;
 }
 
 .letters p {
@@ -104,7 +106,7 @@ section{
 }
 .yourletter{
 	position: absolute;
-    top: 440px;
+    top: 420px;
     left: 320px;
     width: 10%;
     height: 40px;
@@ -119,7 +121,7 @@ section{
 
 .envoyer{
 	position: absolute;
-    top: 450px;
+    top: 420px;
     left: 410px;
     width: 50px;
     height: 30px;
